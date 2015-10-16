@@ -1,0 +1,178 @@
+// systemehospital.cpp : Defines the entry point for the console application.
+//
+#include "stdafx.h"
+#include <iostream>
+#include<string>
+using namespace std;
+
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	char clr[3],lname[10],fname[10],adress[15],gender[8],relationship[15],blood[3],status[10],don[3],all[3];
+    int phone,age,amout;
+	int opt,medicare_no;
+	char dname[30],dob[20],dename[30],det[55],details1[55],date[20],sign[20];
+	
+
+	for(int d=1;d<=40;d++)
+	{
+		
+	cout <<endl<<endl<<"\t\t\t"<<"WELCOME TO MULAGO HOSPITAL" <<endl;
+	
+
+
+	cout <<endl<< "Note:  Users of this form are advised that medical information";
+	cout << "should be treated confidentially."; 
+	cout <<	"In some states, additional legislation ";
+	cout << "affects the management of health records."<<endl; 
+	cout <<	"See /www.mulago_hospital.co.ug for further info"<<endl;
+
+	cout <<"\t\t\t"<<endl<<"ENTER YOUR DETAILS BELOW" <<endl;
+	cout <<"\t\t\t"<< "1. ENTER PERSONAL DETAILS" <<endl;
+	cout <<"\t\t\t"<< "2. ENTER EMERGENCY CONTACT"<<endl ;
+	cout <<"\t\t\t"<< "3. ENTER HEALTH CARE DETAILS" <<endl;
+	cout <<"\t\t\t"<< "4. ENTER MEDICAL DETAILS" <<endl;
+	cout <<"\t\t\t"<< "5. PAYMENT OPTIONS" <<endl;
+	cout <<"\t\t\t"<< "6. CONFIRM DETAILS" <<endl;
+	cout <<endl<< "ENTER AN OPTION E.G 1,2,3,4,5 OR 6 " <<endl;
+	cin >> opt;
+
+	switch(opt)
+	{
+
+	case 1: cout <<endl<< " PERSONAL DETAILS" ;
+		
+	cout <<endl<< "FIRST NAME PLEASE" <<endl;
+	cin >> fname;
+	cout <<endl<< "LAST NAME PLEASE" <<endl;
+	cin >>lname;
+	cout <<endl<<"DATE OF BIRTH:"<<endl;
+	cin.getline(dob,20);
+	cout <<endl<< "AGE" <<endl;
+	cin >> age;
+	cout <<endl<< "GENDER" <<endl;
+	cin >>gender;
+	cout <<endl<< "STATUS" <<endl;
+	cin >>status;
+	
+	cout <<endl<< "ADRESS" <<endl;
+	cin >>adress;
+	cout <<endl<< "TELEPHONE NUMBER" <<endl;
+	cin >>phone;
+	
+		break;
+	case 2: cout <<endl<< " EMERGENCY CONTACT" ;
+
+		cout <<endl<< "FIRST NAME PLEASE" <<endl;
+	cin >> fname;
+	cout <<endl<< "LAST NAME PLEASE" <<endl;
+	cin >>lname;
+	cout <<endl<< "AGE" <<endl;
+	cin >> age;
+	cout <<endl<< "GENDER" <<endl;
+	cin >>gender;
+	cout <<endl<< "RELATIONSHIP" <<endl;
+	cin >>relationship;
+	cout <<endl<< "BLOOD GROUP" <<endl;
+	cin >>blood;
+	cout <<endl<< "ADRESS" <<endl;
+	cin >>adress;
+	cout <<endl<< "TELEPHONE NUMBER" <<endl;
+	cin >>phone;
+		break;
+	case 3: cout <<endl<< " HEALTH CARE DETAILS" ;
+
+	cout <<endl<< "DOCTORS NAME" <<endl;
+	cin.getline(dname,30);
+	cout <<endl<< "DOCTORS TELEPHONE NUMBER" <<endl;
+	cin >>phone;
+	cout <<endl<< "DENTISTS NAME" <<endl;
+	cin.getline(dename,30);
+	cout <<endl<< "DENTISTS TELEPHONE NUMBER" <<endl;
+	cin >>phone;
+	cout <<endl<< "MEDICARE NUMBER" <<endl;
+	cin >>medicare_no;
+		break;
+	case 4: cout <<endl<< " MEDICAL DETAILS" ;
+
+		cout <<endl<< "BLOOD GROUP" <<endl;
+	cin >>blood;
+	cout <<endl<<"ANY MEDICAL CLEARANCE FROM THE DOCTOR?" <<endl;
+	cout <<endl<<"ENTER YES OR NO" <<endl;
+	cin >> clr;
+	cout <<endl << "HAVE YOU EVER DONATED OR RECEIVED BLOOD?"<<endl;
+	cin >> don;
+	if(don=="yes")
+	{
+	
+	
+		cout <<endl<< "GOOD"<<endl;
+	}
+	else
+	{
+		cout <<endl<< "ITS OKAY" <<endl;
+		
+	}
+		cout <<endl<< "DO YOU HAVE ANY ALLERGIES?"<<endl;
+	cin >> all;
+		if(all=="yes")
+	{
+	
+	
+		cout <<endl<< "SORRY, BUT ITS OKAY"<<endl;
+	}
+	else
+	{
+		cout <<endl<< "GOOD" <<endl;
+		
+	}
+		cout <<endl<< "Please list any medical conditions that you have (for example, asthma, diabetes, epilepsy):"<<endl;
+		cin.getline(det,55);
+		cout <<endl<<endl<< " Please list any regular medications you require (include dosage): " <<endl;
+		cin.getline(details1,55);
+	break;
+	case 5: cout <<endl<<endl<< " BILLS AND PAYMENT " <<endl;
+		cout <<endl << "ENTER YOUR AMOUNT" <<endl;
+		cin >> amout;
+
+		if(amout<20000)
+		{
+			cout <<endl<< "SORRY, THAT AMOUNT IS NOT ENOUGH FOR THE SERVICE";
+			cout <<endl<< "PLEASE ENTER AMOUNT ATLEAST 20000" <<endl<<" THANK YOU "; 
+
+		}
+		else if(amout==20000 || amout>20000 && amout<60000)
+		{
+			cout<<endl<< "THANK YOU FOR VISITING MULAGO HOSPITAL"<<endl;
+		}
+			
+		
+		else 
+		{
+			cout <<endl<< "THANK YOU"<<endl;
+		}
+		
+			
+			break;
+	case 6: cout <<endl<< " CONFIRM DETAILS" <<endl;
+		cout <<endl<< " To the best of my knowledge,";
+		cout <<endl << "all information contained on this form is correct";
+        cout <<endl <<"(if under 18 please have a parent or guardian sign)" <<endl;
+		cout <<endl <<"ENTER YOUR SIGNATURE" <<endl;
+		 cin.getline(sign,20);
+		 cout <<endl <<"ENTER THE DATE TODAY" <<endl;
+		 cin.getline(date,20);
+		 cout <<endl<<date<<endl;
+
+	default: cout <<endl<< " INCORRECT OPTION" <<endl;
+		break;
+
+	}
+
+	
+
+	}
+	return 0;
+}
+
+

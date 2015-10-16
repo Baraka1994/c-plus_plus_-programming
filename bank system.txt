@@ -1,0 +1,121 @@
+
+#include "stdafax.h"
+#include<iostream>
+
+using namespace std;
+
+int main ()
+{
+char name[15],fname[15],lname[10],address[20];
+char dob[20],date[20],acc_name[25];
+int tel_no,acc_no,pin,amount,o_pin,n_pin,acc_no_des;
+int choice;
+	
+	for (int k=1;k<=45;k++)
+	{
+	
+	cout << endl << "\t\t\t*******************************" << endl;
+	cout << endl << "\t\t\t**   WELCOME TO ORIENT BANK  **" << endl;
+	cout << endl << "\t\t\t*******************************" << endl <<endl;
+
+	cout << endl << "\t\t\t*******************************" << endl;
+	cout << endl << "\t\t\t***     PLEASE FEEL FREE:    **"   << endl;
+	cout << endl << "\t\t\t**  1.  CREATE AN ACCOUNT:   **" << endl;
+	cout << endl << "\t\t\t**  2.  DEPOSIT:             **" << endl;
+	cout << endl << "\t\t\t**  3.  WITHDRAW:            **" << endl;
+	cout << endl << "\t\t\t**  4.  CHECK BALANCE:       **" << endl;
+	cout << endl << "\t\t\t**  5.  SEND MONNEY:         **" << endl;
+	cout << endl << "\t\t\t**  6.  MANAGE MY ACCOUNT:   **" << endl;
+	cout << endl << "\t\t\t**     ENTER YOUR CHOICE:    ***" << endl;
+	cout << endl << "\t\t\t*******************************" << endl;
+	cin >> choice;
+	
+	switch(choice)
+	{
+		 case 1:cout << endl << "   CREATE AN ACCOUNT:" << endl;
+		        
+		        cout << endl << "   ENTER THE ACCOUNT NAME:" << endl;
+		        cin >> acc_name;
+		        cout << endl << "   ENTER YOUR FIRST NAME:" << endl;
+		        cin >> fname;
+		        cout << endl << "   ENTER YOUR SECOND NAME:" << endl;
+		        cin >> lname;
+		        cout << endl << "   ENTER YOUR ADRESS:" << endl;
+		        cin >> address;
+		        cout << endl << "   ENTER YOUR TELEPHONE NUMBER:" << endl;
+		        cin >> tel_no;
+		        cout << endl << "   ENTER YOUR DATE OF BIRTH:" << endl;
+		        cin >> dob;
+		 break;
+		 case 2:cout << endl << "   DEPOSIT:" << endl;
+		 
+		        cout << endl << "   ENTER YOUR NAME:" << endl;
+		        cin >> name;
+		        cout << endl << "   ENTER THE ACCOUNT NUMBER:" << endl;
+		        cin >> acc_no;
+		        cout << endl << "   ENTER THE PIN NUMBER:" << endl;
+		        cin >> pin;
+		        cout << endl << "   ENTER THE AMOUNT TO DEPOSIT" << endl;
+		        cin >> amount;
+		        cout << endl << "   ENTER THE DATE TODAY:" << endl;
+		        cin >> date;
+		 break;
+		 case 3:cout << endl << "   WITHDRAW:" << endl;
+		 
+		        cout << endl << "   ENTER YOUR NAME:" << endl;
+		        cin >> name;
+		        cout << endl << "   ENTER THE ACCOUNT NUMBER:" << endl;
+		        cin >> acc_no;
+		        cout << endl << "   ENTER THE PIN NUMBER:" << endl;
+		        cin >> pin;
+		        cout << endl << "   ENTER THE AMOUNT TO DEPOSIT" << endl;
+		        cin >> amount;
+		        cout << endl << "   ENTER THE DATE TODAY:" << endl;
+		        cin >> date;
+		 break;
+		 case 4:cout << endl << "   CHECK BALANCE:" << endl;
+		 
+		        cout << endl << "   ENTER YOUR NAME:" << endl;
+		        cin >> name;
+		        cout << endl << "   ENTER THE ACCOUNT NUMBER:" << endl;
+		        cin >> acc_no;
+		        cout << endl << "   ENTER THE PIN NUMBER:" << endl;
+		        cin >> pin;
+		        cout << endl << "   ENTER THE DATE TODAY:" << endl;
+		        cin >> date;
+		 break;
+		 case 5:cout << endl << "   SEND MONEY:" << endl;
+		 
+		        cout << endl << "   ENTER YOUR NAME:" << endl;
+		        cin >> name;
+		        cout << endl << "   ENTER THE ACCOUNT NUMBER:" << endl;
+		        cin >> acc_no;
+		        cout << endl << "   ENTER THE PIN NUMBER:" << endl;
+		        cin >> pin;
+		        cout << endl << "   ENTER THE AMOUNT TO SEND" << endl;
+		        cin >> amount;
+		        cout << endl << "   ENTER THE DATE TODAY:" << endl;
+		        cin >> date;
+		        cout << endl << "   ENTER THE DESTINATION ACCOUNT NUMBER:" << endl;
+		        cin >> acc_no_des;
+	     break;
+	     case 6:cout << endl << "   MANAGE MY ACCOUNT:" << endl;
+	     
+	            cout << endl << "   CHANGE MY PIN:" << endl;
+	            cout << endl << "   ENTER THE OLD PIN:" << endl;
+	            cin >> o_pin;
+	            cout << endl << "   ENTER THE NEW PIN:" << endl;
+	            cin >> n_pin;
+	            cout << endl << "   ENTER THE DATE TODAY:" << endl;
+		        cin >> date;
+	     break;
+		 default:
+		 break;
+	}
+	}
+	
+	
+	
+	
+	return 0;
+}

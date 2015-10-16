@@ -1,0 +1,196 @@
+// Tomusange work.cpp : Defines the entry point for the console application.
+//
+
+#include "iostream"
+#include "conio.h"
+#include "process.h"
+#include "string.h"
+#include "fstream"
+using namespace std;
+class patient
+{
+	char pfn[30],psn[30],pdis[30],psex[30],pnalty[30];
+	int page;
+    public:
+		void create_patient();
+		void view_patient();
+};
+class doctor{
+	char dfn[30],dsn[30],dsex[30],dnalty[30],educ_level[30],pno[30];
+	int dage;
+public:
+	void create_doctor();
+	void view_doctor();
+};
+void patient::create_patient(){
+	cout<<"\n\t=======================================================================================";
+		cout<<"\n\t\t\t CREATE PATIENT";
+	cout<<"\n\t======================================================================================";
+		cout<<"\n\t\tFIRST NAME:";
+	cin>>pfn;
+	cout<<"\n\t\tSECOND NAME:";
+	cin>>psn;
+	cout<<"\n\t\tPATIENT NO:";
+	cin>>pno;
+	cout<<"\n\t\tDISEASE:";
+	cin>>pdis;
+	cout<<"\n\t\tSEX:";
+	cin>>psex;
+	cout<<"\n\t\tNATIONALITY:";
+	cin>>pnalty;
+	cout<<"\n\t\tAGE:";
+	cin>>Page;
+	cout<<"\n\t=========================================================================================";
+}
+void patient::view_patient(){
+	cout<<"\n\t=========================================================================================";
+	cout<<"\n\t\tPATIENT REPORT";
+	cout<<"\n\t=========================================================================================";
+	cout<<"\n\t\tFIRST NAME:"<<pfn;
+	cout<<"\n\t\tSECOND NAME:"<<psn;
+	cout<<"\n\t\tPATIENT NAME:"<<pno;
+	cout<<"\n\t\tDISEASE:"<<pdis;
+	cout<<"\n\t\tSEX:"<<psex;
+	cout<<"\n\t\tNATIONALITY:"<<pnalty;
+	cout<<"\n\t\tAGE:"<<page;
+	cout<<"\n\t=========================================================================================";
+	void doctor::create_doctor(){
+	cout<<"\n\t=========================================================================================";
+	cout<<"\n\t\tFISRT NAME:";
+	cind>>dfn;
+	cout"\n\t\tSECOND NAME:";
+	cin>>dsn;
+	cout"\n\t\tDOCTOR NO:";
+	cin>>dno;
+	cout"\n\t\tEDUCATION LEVEL:";
+	cind>>educ_level;
+	cout"\n\t\tSEX:";
+	cin>>dsex;
+	cout"\n\t\tNATIONALITY:";
+	cin>>dnalty;
+	cout"\n\t\tAGE:";
+	cin>>dage;
+	cout<<"\n\t=========================================================================================";
+	}
+	void doctor::view_doctor(){
+		cout<<"\n\t=========================================================================================";
+		cout"\n\t\tDOCTOR REPORT:";
+		cout<<"\n\t\=========================================================================================";
+		cout<<"\n\t\t\\FISRT NAME                  :"<<dfn;
+		cout<<"\n\t\tSECOND NAME                  :"<<dsn;
+		cout<<"\n\t\t\DOCTOR NO                  :"<<dno;
+		cout<<"\n\t\t\EDUCATION LEVEL             :"<<educ_level;
+		cout<<"\n\t\t\SEX                         :"<<dsex;
+		cout<<"\n\t\t\NATIONALITY                  :"<<dnalty;
+		cout<<"\n\t\t\\AGE                         :"<<dage;
+		cout<<"\n\n\t=========================================================================================";
+	}
+	void intro();
+	void welcome();
+	void write_patient();
+	void write_doctor();
+	int main(){
+		char op;
+		intro();
+		welcome();
+		do
+		clrscr();
+			cout<<"\n\t=========================================================================================";
+		cout"\n\n\t\TST.BOSCO MAIN MENU:";
+		cout<<"\n\n\t=========================================================================================";
+		cout"\n\n\t\01.REGISTER PATIENT";
+		cout"\n\n\t\02.REGISTER DOCTOR";
+		cout"\n\n\t\03.EXIT APPLICATION";
+		cout<<"\n\n\t=========================================================================================";
+		cout"\n\n\t\select option(1 to 3).....";
+		op=getche();
+		switch(op){
+		case'1':
+			clrscr();
+			write_patient();
+			break;
+		case'2':
+			clrscr();
+				write_doctor();
+			break;
+			case'3':
+			clrscr();
+		cout<<"\n\n\t=========================================================================================";
+		cout<<"\n\n\n\t========================================================================================";
+		cout<<"\n\n\n\t\tYOU HAVE TERMINATED THE SYSTEM!!!";
+		cout<<"\n\n\n\t\tHOPE YOU HAVE ENJOYED THE SERVICE!!!";
+		cout<<"\n\n\n\t\tGOOD BYE!!!";
+		cout<<"\n\n\n\t========================================================================================";
+		exit(0);
+		break;
+defaut:
+		cout<<"\a"
+       break;
+		}
+	}while(op!='3');
+	return;0
+}
+void write_patient(){
+	patient pa;
+	pa.create_patient();
+	cout<<"\n\n\t\tpress any key to go to Generate patient report......";
+	getche();
+	clrscr();
+	pa.view_patient();
+	cout<<"\n\n\t\tpress any key to go to the main menu......";
+	getche();
+	clrscr();}
+void write_doctor(){
+	doctor doc;
+	doc.create_doctor();
+	cout<<"\n\n\t\tpress any key to go to generate patient report......";
+	getche();
+	
+	doc.view_doctor();
+	cout<<"\n\n\t\tpress any key to go to the main menu......";
+	getche();
+	
+}
+void welcome(){
+	char username[10]="a"
+		char uname[10]
+	char password[10]="a";
+	char userpw[7];
+	cout<<"\n\n\t------------------------------------------------------------";
+		cout<<"\n\n\t welcome to st.Tomusange international hospital";
+	cout<<"\n\t----------authentication---------------------------";
+	cout<<"\n\n\tusername:";
+	cin>>username;
+		cout<<"\n\t\tpassword:";
+	cin>>userpw;
+	//check whether username and password are valid
+	if(strcmp(password,usernpw)==0 && strcmp(username,username)==0){
+		
+			cout<<"";
+	}}
+void intro(){
+	cout<<"welcome";
+	getche();
+	}
+
+
+
+
+
+
+	
+
+	
+
+
+		
+
+
+
+
+
+
+
+
+
+
